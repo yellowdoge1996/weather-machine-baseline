@@ -12,7 +12,7 @@ public class SeedingMachine implements Observer {
     }
 
     public void update(int... args) {
-        if (args[0] > 5){
+        if (args[0] > TEMP){
             status = true;
         }
     }
