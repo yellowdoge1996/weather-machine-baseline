@@ -1,7 +1,5 @@
 package weathermachine;
 
-import java.util.Observable;
-
 public class WateringMachine implements Observer {
     private static final int TEMP = 10;
     private static final int HUMIDITY = 55;
@@ -12,8 +10,8 @@ public class WateringMachine implements Observer {
         return status;
     }
 
-    public void update(int... args) {
-        if (args[0] > TEMP && args[1] < HUMIDITY && args[2] < WIND_POWER){
+    public void update(int temp, int humidity, int windPower) {
+        if (temp > TEMP && humidity < HUMIDITY && windPower < WIND_POWER){
             status = true;
         }
     }

@@ -15,7 +15,9 @@ package weathermachine;
 public interface Observer {
     /**
      * 更新状态
-     * @param args  参数
+     * @param   temp        温度
+     * @param   humidity    湿度
+     * @param   windPower   风力
      */
-    void update(int... args);
+    void update(int temp, int humidity, int windPower);
 }

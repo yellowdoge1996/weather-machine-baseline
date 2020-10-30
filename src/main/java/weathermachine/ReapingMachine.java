@@ -11,8 +11,8 @@ public class ReapingMachine implements Observer {
         return status;
     }
 
-    public void update(int... args) {
-        if (args[0] > TEMP && args[1] > HUMIDITY){
+    public void update(int temp, int humidity, int windPower) {
+        if (temp > TEMP && humidity > HUMIDITY){
             status = true;
         }
     }
