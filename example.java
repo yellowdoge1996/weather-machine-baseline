@@ -4,20 +4,19 @@ import java.util.*;
 
 public class Example {
   public void computeScore(String type, Double score, Double sum) {
-    if (type.equals("type1")) {
-      sum += score * 0.1;
-    } else if (type.equals("type2")) {
-      sum += score * 0.2;
-    } else if (type.equals("type3")) {
-      sum += score * 0.3;
-    } else if (type.equals("type4")) {
-      sum += score * 0.4;
-    } else if (type.equals("type5")) {
-      sum += score * 0.5;
-    } else if (type.equals("type6")) {
-      sum += score * 0.6;
-    } else if (type.equals("type7")) {
-      sum += score * 0.7;
-    }  
+    Map<String, Double> map = new HashMap<String, Double>(){
+      {
+        put("type1", 0.1);
+        put("type1", 0.2);
+        put("type1", 0.3);
+        put("type1", 0.4);
+        put("type1", 0.5);
+        put("type1", 0.6);
+        put("type1", 0.7);
+      }
+    };
+    if (map.containsKey(type)) {
+      sum += score * map.get(type);
+    }
   }
 }
